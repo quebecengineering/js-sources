@@ -554,10 +554,11 @@
 
     _searchInLayer: function (layer, retRecords, propName, baseProp = 'options') {
       const self = this; let loc
-
+      
       if (layer instanceof L.Control.Search.Marker) return
 
       if (layer instanceof L.Marker || layer instanceof L.CircleMarker) {
+        console.log(layer);
         if (self._getPath(layer.options, propName)) {
           loc = layer.getLatLng()
           loc.layer = layer
