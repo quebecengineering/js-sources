@@ -705,6 +705,7 @@
           if (this._input.value.length >= this.options.minLength) {
             clearTimeout(this.timerKeypress) // cancel last search request while type in
             this.timerKeypress = setTimeout(function () { // delay before request, for limit jsonp/ajax request
+              console.log("KEypress");
               self._fillRecordsCache()
             }, this.options.delayType)
           } else { this._hideTooltip() }
