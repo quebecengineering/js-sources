@@ -727,6 +727,8 @@
     },
 
     _fillRecordsCache: function () {
+      console.log("_fillRecordsCache");
+      
       const self = this
       const inputText = this._input.value; let records
 
